@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+{% autoescape false %}
+    var all_hotels = {{ hotels | json }};
+    var all_restaurants = {{ restaurants | json }};
+    var all_things_to_do = {{ things_to_do | json }};
+    //var all_days = [{day: 1, hotel: "Ritz"}]//{{ days | json }};
+{% endautoescape %}
+</script>
+
+<div class='container' id='dropdowns' style='height:200px'>
+
+    <script type="text/template" id='day_template'>
+      <h1> Selected hotel : <%= hotel  %> </h1>
+    </script>
+
+    <script type="text/template" id='hotel_template'>
+
+      <p><%= name %> </p>
+
+    </script>
+
+</div>
+  <script src="/javascripts/day.model.js"></script>
+  <script src="/javascripts/day.view.js"></script>
+  <script src="/javascripts/trip.model.js"></script>
+  <script src="/javascripts/trip.view.js"></script>
+
+  <script src="/javascripts/hotel.model.js"></script>
+  <script src="/javascripts/restaurant.model.js"></script>
+  <script src="/javascripts/thingstodo.model.js"></script>
+  <script src="/javascripts/hotel.view.js"></script>
+
+  <script type="text/javascript">
+
+  // var hotelDropDown = new HotelDropDown();
+
+  </script>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{
+  "name": "tripplanner",
+  "version": "0.0.0",
+  "homepage": "https://github.com/FullstackAcademy/sept-2014-library",
+  "authors": [
+    "omriBernstein <hippiccolo@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "underscore": "~1.7.0"
+  }
+}
