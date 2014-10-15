@@ -1,31 +1,18 @@
-
-
 var Trip = function() {
 	this.currentDay = 1;
   this.days = [];
-  //this.view = new DayView(this);
-  var day1 = new Day()
-  day1.hotel = "Ritz"
-  this.days.push(day1);
-  day1.view.template()
-  day1.view.render()
+  this.addDay();
 
 }
 
+Trip.prototype.addDay = function() {
+	var newDay = new Day('the ritz');
+	console.log('new day.view', newDay.view)
+	newDay.view.template()
+	console.log(newDay.view.template)
+  newDay.view.render()	
+  this.days.push(newDay);
+};
 
-
-// Day.prototype.addActivity = function(type, id) {
-// 	if (type === "hotel") {
-//    	this.hotel = id;
-//   }
-// };
-
-// Day.prototype.removeActivity = function(type, id) {
-
-// };
-
-// Day.prototype.save = function() {
-	
-// };
 
 var aTrip = new Trip();

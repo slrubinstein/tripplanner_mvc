@@ -23,6 +23,7 @@ HotelView.prototype.addEventListeners = function() {
 
  all_hotels.forEach(function(hotel) {
   var newHotel = new Hotel(hotel.name);
+  console.log(newHotel.view)
   newHotel.view.template()
   newHotel.view.render()
 })

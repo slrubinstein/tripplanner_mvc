@@ -1,7 +1,6 @@
 
-
-var Day = function() {
-	this.hotel = null;
+var Day = function(hotel) {
+	this.hotel = hotel;
 	this.restaurants = [];
 	this.thingsToDO = [];
   this.view = new DayView(this);
